@@ -11,6 +11,8 @@ export const getAllOrders = async (req, res, next) => {
       const orderProducts = await orderService.getOrderProducts(order.id);
       ordersProducts.push({ ...order, products: orderProducts.length })
     }
+    ordersProducts.sort((a,b) => a.id - b.id);
+
     res.status(200).json({ success: true, data: ordersProducts });
   } catch (error) {
     next(error);

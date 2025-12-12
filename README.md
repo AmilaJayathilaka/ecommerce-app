@@ -3,7 +3,8 @@
 - Setup PostgreSQL
 
 ## Run Back-End (micro-services)
-- Update micro-services/.env file postgres user DB_PASSWORD with your password
+- Create database and tables using `micro-services\src\config\db_schemas.sql` in PostgreSQL
+- Update `micro-services\.env` 'postgres' user DB_PASSWORD with your password
 - Open terminal/gitbash and goto the micro-services folder
 - Run `npm i`
 - Run `npm run dev`
